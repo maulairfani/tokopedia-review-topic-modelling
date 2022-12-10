@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #0a2a43;
+}
+
+/* ----------------------------judul 1------------------------------------ */
+
+.container_judul1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.judul_1{
+    text-align: center;
+    margin-top: 60px;
+    font-size: 90px;
+    color: #fff;
+    background: rgb(144,121,182);
+    background: linear-gradient(135deg, rgba(144,121,182,1) 19%, rgba(87,50,144,1) 57%, rgba(55,30,97,1) 83%);
+    padding: 0px 40px;
+    border-radius: 80px;
+}
+
+/* -----------------------------isi 1----------------------------------- */
+
+.container_1{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* ----------------------------judul 2------------------------------------ */
+
+.container_judul2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.judul_2{
+    text-align: center;
+    margin-top: 100px;
+    font-size: 90px;
+    color: #fff;
+    background: rgb(144,121,182);
+    background: linear-gradient(135deg, rgba(144,121,182,1) 19%, rgba(87,50,144,1) 57%, rgba(55,30,97,1) 83%);
+    padding: 0px 40px;
+    border-radius: 80px;
+}
+
+/* ----------------------------isi 2------------------------------------ */
+
+.atas_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; */
+    /* box-sizing: border-box; */
+}
+
+.container_2{
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform-style: preserve-3d;
+    margin-bottom: 70px;
+}
+
+.container_2 .box{
+    position: relative;
+    width: 494px;
+    height: 246px;
+    margin: 40px 0px;
+    background: #000;
+    background: #000;
+    transform-style: preserve-3d;
+    border-radius: 20px;
+}
+
+.container_2 .box:hover{
+    box-shadow: 0 50px 80px rgba(0,0,0,.2);
+}
+
+.container_2 .box .imgBx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-style: solid;
+    border-color: white;
+    border-width: 10px;
+    border-radius: 20px;
+}
+
+.container_2 .box .imgBx img{
+    border-radius: 20px;
+}
+
+.wordcloud {
+    width: 100px;
+}
+
+.container_2 .box .contentBx{
+    position: absolute;
+    top: 90%;
+    left: 10px;
+    right: 10px;
+    background: #fff;
+    transform: translateZ(20px)scaleY(0); 
+    padding: 20px 20px;
+    transform-origin: top;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+}
+
+.container_2 .box:hover .contentBx{
+    transform: translateZ(50px) scaleY(1);
+    border-radius: 30px;
+}
+
+/* ----------------------------button------------------------------------ */
+
+.container_button{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.btn{
+    border: 1px solid rgb(144,121,182);
+    background: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: "montserrat";
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.btn1{
+    color: white;
+    /* background: rgb(144,121,182);
+    background: linear-gradient(135deg, rgba(144,121,182,1) 19%, rgba(87,50,144,1) 57%, rgba(55,30,97,1) 83%); */
+}
+
+.btn1:hover{
+    color: white;
+    border-radius: 50px;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: rgb(144,121,182);
+    background: linear-gradient(135deg, rgba(144,121,182,1) 19%, rgba(87,50,144,1) 57%, rgba(55,30,97,1) 83%);
+    z-index: -1;
+    transition: 0.8s;
+}
+
+.btn::before{
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+}
+
+.btn1:hover::before{
+    height: 180%;
+}
+
+/* --------------loading screen--------------------------------------------------- */
+
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(144,121,182);
+    background: linear-gradient(135deg, rgba(144,121,182,1) 19%, rgba(87,50,144,1) 57%, rgba(55,30,97,1) 83%);
+    transition: opacity 5s, visibility 5s;
+}
+
+.loader-hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::after{
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddddd;
+    border-top-color: #7449f5;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+    from{
+        transform: rotate(0turn);
+    }
+    to{
+        transform: rotate(1turn);
+    }
+}
